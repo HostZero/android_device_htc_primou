@@ -1,4 +1,4 @@
-# Device configuration for the HTC One V
+# TWRP 3.x Device Tree for the HTC One V
 
 ## Spec Sheet
 | Feature                 | Specification                     |
