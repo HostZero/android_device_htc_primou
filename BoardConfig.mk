@@ -8,9 +8,16 @@
 TARGET_BOOTLOADER_BOARD_NAME := primou
 
 # Kernel
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x13F00000
 BOARD_KERNEL_PAGE_SIZE := 4096
+TARGET_PREBUILT_KERNEL := device/htc/primou/kernel.gz
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -29,13 +36,8 @@ BOARD_KERNEL_PAGE_SIZE := 4096
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 836763136
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1023409664
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5194304
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 5194304
 BOARD_FLASH_BLOCK_SIZE := 262144
-
-TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
-#TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-androidprimou
-TARGET_KERNEL_CONFIG := primou_defconfig
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
-#TARGET_PREBUILT_KERNEL := device/htc/primou/prebuilt/kernel/kernel
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
@@ -47,19 +49,18 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/primou/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/primou/bluetooth/libbt_vndcfg.txt
 
 # Recovery
-TARGET_RECOVERY_FSTAB = device/htc/msm7x30-common/rootdir/fstab.qcom
-RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB = device/htc/device/recovery/root/etc/twrp.fstab
 
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
-# TWRP
-#RECOVERY_VARIANT := twrp
+# TWRP stuff
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_mdpi
-#RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_INCLUDE_CRYPTO := true
-#TW_USE_TOOLBOX := true
-#TW_NO_SCREEN_BLANK := true
-#TW_NO_CPU_TEMP := true
+TW_USE_TOOLBOX := true
+TW_NO_SCREEN_BLANK := true
+TW_NO_CPU_TEMP := true
 TARGET_RECOVERY_DEVICE_MODULES := chargeled
