@@ -16,14 +16,6 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from primou device
-$(call inherit-product, device/htc/primou/primou.mk)
-
-# Boot Animation
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 480
-TARGET_BOOTANIMATION_HALF_RES := true
-
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_primou
 PRODUCT_DEVICE := primou
