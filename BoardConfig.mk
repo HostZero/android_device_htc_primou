@@ -11,13 +11,14 @@ TARGET_BOOTLOADER_BOARD_NAME := primou
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := generic
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x13F00000
 BOARD_KERNEL_PAGE_SIZE := 4096
-TARGET_PREBUILT_KERNEL := device/htc/primou/kernel.gz
+TARGET_PREBUILT_KERNEL := device/htc/primou/kernel
 
 # cat /proc/emmc
 #dev:        size     erasesize name
