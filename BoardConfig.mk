@@ -50,7 +50,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/primou/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/primou/bluetooth/libbt_vndcfg.txt
 
 # Recovery
-TARGET_RECOVERY_FSTAB = device/htc/device/recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_FSTAB = device/htc/primou/recovery/root/etc/twrp.fstab
 
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
