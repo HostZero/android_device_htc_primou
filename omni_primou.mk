@@ -97,9 +97,9 @@ PRODUCT_LOCALES += en_US
 # RECOVERY
 PRODUCT_COPY_FILES += \
 $(LOCAL)/rootdir/root/fstab.qcom:recovery/root/fstab.qcom \
-$(LOCAL)/roordir/root/init.environ.rc:recovery/root/init.environ.rc \
+$(LOCAL)/rootdir/root/init.environ.rc:recovery/root/init.environ.rc \
 $(LOCAL)/rootdir/root/init.qcom.power.rc:recovery/root/init.qcom.power.rc \
-$(LOCAL)/roordir/root/init.qcom.rc:recovery/root/init.qcom.rc \
+$(LOCAL)/rootdir/root/init.qcom.rc:recovery/root/init.qcom.rc \
 $(LOCAL)/rootdir/root/init.qcom.usb.rc:recovery/root/init.qcom.usb.rc \
-$(LOCAL)/roordir/root/init.target.rc:recovery/root/init.target.rc \
-$(LOCAL)/roordir/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc 
+$(LOCAL)/rootdir/root/init.target.rc:recovery/root/init.target.rc \
+$(LOCAL)/rootdir/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc 
